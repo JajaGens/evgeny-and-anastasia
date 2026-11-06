@@ -111,20 +111,6 @@
     });
   }
 
-  /* ---------- Стартовый экран: кнопка открывает сайт и включает музыку ---------- */
-  var intro = document.getElementById("cover");
-  var introBtn = document.getElementById("cover-open");
-  if (intro && introBtn) {
-    introBtn.addEventListener("click", function () {
-      startMusic();
-      intro.classList.add("is-open");
-      doc.classList.remove("cover-lock");
-      window.scrollTo(0, 0);
-      intro.addEventListener("transitionend", function (e) { if (e.target === intro && e.propertyName === "clip-path") intro.remove(); });
-    });
-    introBtn.focus({ preventScroll: true });
-  }
-
   /* ---------- Рассадка ---------- */
   var TABLES = {
     1: ["Евстратьев Владимир", "Евстратьева Елена", "Смирнов Сергей", "Евстратьев Александр", "Евстратьева Марина", "Евстратьева Тамара", "Евстратьев Игорь"],
