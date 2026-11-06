@@ -1,0 +1,39 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Evgeniy & Anastasia//Wedding//RU
+CALSCALE:GREGORIAN
+BEGIN:VTIMEZONE
+TZID:Europe/Moscow
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0300
+TZNAME:MSK
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:wedding-registration-20261113@evgeniy-anastasia
+DTSTAMP:20261105T090000Z
+SEQUENCE:0
+DTSTART;TZID=Europe/Moscow:20261113T164000
+DTEND;TZID=Europe/Moscow:20261113T173000
+SUMMARY:Свадьба Евгения и Анастасии – регистрация
+LOCATION:Дворец бракосочетания №1\, Английская наб.\, 28\, Санкт-Петербург
+DESCRIPTION:Торжественная регистрация. В 18:00 ждем вас в ресторане «Никольский лофт»\, ул. Садовая\, 62.
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Свадьба Евгения и Анастасии
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:wedding-dinner-20261113@evgeniy-anastasia
+DTSTAMP:20261105T090000Z
+SEQUENCE:0
+DTSTART;TZID=Europe/Moscow:20261113T180000
+DTEND;TZID=Europe/Moscow:20261113T230000
+SUMMARY:Свадьба Евгения и Анастасии – ужин
+LOCATION:Ресторан «Никольский лофт»\, ул. Садовая\, 62\, Санкт-Петербург
+DESCRIPTION:18:00 сбор гостей · 18:30 встреча молодоженов · 19:00 начало ужина
+END:VEVENT
+END:VCALENDAR

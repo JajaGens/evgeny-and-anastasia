@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="ru" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Евгений &amp; Анастасия · 13.11.2026</title>
+<meta name="description" content="Приглашение на свадьбу Евгения и Анастасии. 13 ноября 2026, Санкт-Петербург.">
+<meta name="theme-color" content="#F8F4EE">
+<link rel="canonical" href="https://evgeny-and-anastasia.wedding-site.ru/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://evgeny-and-anastasia.wedding-site.ru/">
+<meta property="og:title" content="Евгений &amp; Анастасия · 13.11.2026">
+<meta property="og:description" content="Приглашаем вас на нашу свадьбу. 13 ноября 2026, Санкт-Петербург">
+<meta name="robots" content="noindex">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:image" content="https://evgeny-and-anastasia.wedding-site.ru/img/og.jpg">
+<meta property="og:image:alt" content="Евгений и Анастасия в Токио – приглашение на свадьбу">
+<noscript><style>.reveal,.rise{opacity:1!important;transform:none!important}</style></noscript>
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://evgeny-and-anastasia.wedding-site.ru/img/og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Manrope:wght@300;400;500&display=swap">
+<link rel="preload" as="image" href="img/rome1-800.webp" imagesrcset="img/rome1-800.webp 800w, img/rome1-1600.webp 1600w" imagesizes="100vw">
+<link rel="stylesheet" href="assets/base.css">
+<style>
+/* ===== Макет 1 «Классика»: центральная ось, тонкие золотые линии, тишина ===== */
+
+/* Орнамент-разделитель: линия · ромб · линия */
+.ornament { display: flex; align-items: center; justify-content: center; gap: var(--sp-3); color: var(--gold); }
+.ornament::before, .ornament::after { content: ""; width: var(--sp-8); height: 1px; background: currentColor; opacity: .6; }
+.ornament i { width: var(--sp-2); height: var(--sp-2); border: 1px solid currentColor; transform: rotate(45deg); }
+
+.center { text-align: center; }
+.section-title { text-align: center; }
+.section-title::after { content: ""; display: block; width: var(--sp-7); height: 1px; margin: var(--sp-5) auto 0; background: var(--gold); }
+
+/* --- Первый экран --- */
+.hero-text { padding: var(--sp-9) var(--gutter) var(--sp-7); text-align: center; }
+.hero h1 { font-style: italic; }
+.hero h1 .amp { display: block; font-style: normal; font-size: .55em; line-height: 1.2; color: var(--gold); }
+.hero-date { margin-top: var(--sp-5); color: var(--ink-soft); }
+.hero-date b { display: block; font-family: var(--font-display); font-weight: 400; font-size: var(--fs-lead); letter-spacing: .12em; color: var(--ink); text-transform: none; margin-bottom: var(--sp-1); }
+
+.greeting .lead { margin-top: var(--sp-6); }
+.greeting .sign { margin-top: var(--sp-5); font-family: var(--font-display); font-style: italic; font-size: var(--fs-lead); color: var(--gold-deep); }
+
+/* --- Где и когда --- */
+.places { background: var(--beige); }
+.place-grid { display: grid; gap: var(--block-gap); }
+.place {
+  display: grid; justify-items: center; gap: var(--sp-3);
+  padding: var(--card-pad); text-align: center;
+  background: var(--ivory); border: 1px solid var(--line); border-radius: var(--radius);
+}
+.place-time { font-family: var(--font-display); font-size: var(--fs-h2); line-height: 1; color: var(--gold); }
+.place p.small { max-width: 24ch; }
+.place .link { margin-top: var(--sp-2); }
+.calendar { display: flex; justify-content: center; margin-top: var(--sp-6); }
+@media (min-width: 48rem) { .place-grid { grid-template-columns: 1fr 1fr; } }
+
+.flame { display: block; width: var(--sp-3); height: var(--sp-6); margin: var(--sp-4) auto 0; }
+.section-title--flame::after { display: none; }
+
+/* --- Стартовый экран --- */
+html.cover-lock, html.cover-lock body { overflow: hidden; }
+.cover { position: fixed; inset: 0; z-index: 100; display: flex; flex-direction: column; justify-content: space-between; align-items: center; padding: calc(var(--sp-8) + env(safe-area-inset-top)) var(--gutter) calc(var(--sp-8) + env(safe-area-inset-bottom)); color: var(--ivory); text-align: center; clip-path: circle(150% at 50% 88%); transition: clip-path 2.6s cubic-bezier(.45, 0, .2, 1), visibility 0s 2.6s; background: var(--ink); }
+.cover.is-open { clip-path: circle(0% at 50% 88%); visibility: hidden; pointer-events: none; }
+.cover img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 38% 50%; transform: scale(1.06); transition: transform 2.6s ease; }
+.cover.is-open img { transform: scale(1.18); }
+.cover::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(to bottom, X); }
+.cover-head, .cover > .btn { position: relative; z-index: 2; }
+.cover-head { display: grid; justify-items: center; gap: var(--sp-4); }
+.cover h1 { font-style: italic; font-weight: 400; font-size: min(var(--fs-hero), 9vh); line-height: 1.05; }
+.cover h1 span { display: block; font-style: normal; font-size: .5em; color: var(--champagne); }
+.cover-date { font-size: var(--fs-small); font-weight: 500; letter-spacing: .18em; text-transform: uppercase; text-shadow: 0 1px 3px rgb(30 26 23 / .85), 0 0 18px rgb(30 26 23 / .6); }
+.cover h1 { text-shadow: 0 2px 18px rgb(30 26 23 / .5); }
+.cover .btn { background: var(--ivory); color: var(--ink); border: 1px solid var(--ivory); box-shadow: 0 8px 28px rgb(30 26 23 / .35); }
+.cover .btn:hover { background: var(--champagne); border-color: var(--champagne); }
+@media (prefers-reduced-motion: reduce) { .cover, .cover img { transition-duration: .01s; } }
+
+/* --- Программа: свечи на линии --- */
+.candles { position: relative; max-width: 34rem; margin-inline: auto; display: grid; gap: var(--sp-6); text-align: center; }
+.candles li { position: relative; padding-top: var(--sp-6); }
+.candles li::before { content: ""; position: absolute; top: 0; left: 50%; width: .5rem; height: .5rem; margin-left: -.25rem; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 .375rem rgb(184 151 90 / .15), 0 0 1.5rem .5rem rgb(216 195 165 / .6); }
+.candles time { display: block; margin-top: var(--sp-1); font-family: var(--font-display); font-size: var(--fs-h2); line-height: 1.1; color: var(--gold); }
+.candles p { margin-top: var(--sp-1); }
+@media (min-width: 60rem) {
+  .candles { max-width: var(--w-content); grid-template-columns: repeat(4, 1fr); gap: var(--sp-5); }
+  .candles h3 { min-height: calc(var(--fs-h3) * 2.4); display: flex; align-items: flex-end; justify-content: center; }
+  .candles::before { content: ""; position: absolute; top: .25rem; left: 12.5%; right: 12.5%; border-top: 1px solid var(--line); }
+}
+
+/* --- Дресс-код --- */
+.dress { background: var(--beige); }
+.dress .intro { max-width: 34rem; margin: 0 auto var(--sp-7); }
+.dress .swatch i { box-shadow: inset 0 0 0 4px rgb(255 255 255 / .35), 0 0 0 1px var(--line); }
+
+/* --- Рассадка --- */
+.seating .finder { max-width: 26rem; margin: 0 auto var(--sp-6); text-align: center; }
+.seating .finder-result { text-align: center; }
+@media (min-width: 64rem) { .tables { grid-template-columns: repeat(4, 1fr); } }
+
+/* --- Финал --- */
+.finale-text { text-align: center; }
+.finale-title { margin-top: var(--sp-5); }
+.finale-text p { margin-top: var(--sp-4); }
+.finale video { object-position: 50% 30%; }
+footer { padding: var(--sp-7) var(--gutter) var(--sp-9); text-align: center; }
+footer .h3 { font-style: italic; }
+footer .caps { display: block; margin-top: var(--sp-2); color: var(--ink-soft); }
+</style>
+</head>
+<body>
+<div class="cover" id="cover" role="dialog" aria-label="Приглашение на свадьбу">
+  <img src="img/paris-hero-800.webp" alt="" fetchpriority="high">
+  <div class="cover-head">
+    <h1>Евгений <span>&amp;</span> Анастасия</h1>
+    <p class="cover-date">13 · 11 · 2026 · Санкт-Петербург</p>
+  </div>
+  <button class="btn" type="button" id="cover-open">Открыть приглашение</button>
+</div>
+<script>document.documentElement.classList.add("cover-lock");</script>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="flame" viewBox="0 0 12 32"><path d="M6 1C8.5 5 10 7.5 10 10a4 4 0 0 1-8 0C2 7.5 3.5 5 6 1Z" fill="#D8C3A5"/><path d="M6 5c1.2 2 2 3.3 2 4.6a2 2 0 0 1-4 0C4 8.3 4.8 7 6 5Z" fill="#B8975A"/><path d="M6 15v16" stroke="#B8975A" stroke-width="1"/></symbol></svg>
+
+<header class="hero">
+  <div class="hero-text rise">
+    <h1>Евгений <span class="amp">&amp;</span> Анастасия</h1>
+    <p class="hero-date caps"><b class="num">13 · 11 · 2026</b>Санкт-Петербург</p>
+  </div>
+  <figure class="photo" style="--ar:4 / 3">
+    <img src="img/rome1-800.webp" srcset="img/rome1-800.webp 800w, img/rome1-1600.webp 1600w" sizes="100vw" alt="Евгений и Анастасия у Колизея" fetchpriority="high">
+    <span class="stamp stamp--tr" data-city="Roma" data-country="Italia"></span>
+  </figure>
+</header>
+
+<main>
+  <section class="section greeting">
+    <div class="container container--text center reveal">
+      <div class="ornament"><i></i></div>
+      <p class="lead">Дорогие родные и друзья! Мы побывали во многих городах, но самое главное путешествие начинается здесь. Будем счастливы разделить этот день с вами.</p>
+      <p class="sign">С любовью, Евгений и Анастасия</p>
+    </div>
+  </section>
+
+  <section class="section places" id="where">
+    <div class="container">
+      <h2 class="section-title reveal">Где и когда</h2>
+      <div class="place-grid">
+        <article class="place reveal">
+          <h3>Регистрация</h3>
+          <p class="place-time num">16:40</p>
+          <p class="small">Дворец бракосочетания №1<br>Английская наб., 28, Санкт&#8209;Петербург</p>
+          <a class="link" href="https://yandex.com.ge/maps/-/CXv5y-J8" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+            <span>Открыть в Яндекс Картах</span>
+          </a>
+        </article>
+        <article class="place reveal">
+          <h3>Сбор гостей</h3>
+          <p class="place-time num">18:00</p>
+          <p class="small">Ресторан «Никольский лофт»<br>ул. Садовая, 62, Санкт&#8209;Петербург</p>
+          <a class="link" href="https://yandex.ru/maps/?text=Санкт-Петербург%2C%20Садовая%20улица%2C%2062%2C%20Никольский%20лофт" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+            <span>Открыть в Яндекс Картах</span>
+          </a>
+        </article>
+      </div>
+      <div class="calendar reveal">
+        <a class="btn btn--solid" href="assets/wedding.ics" download="svadba-evgeniy-anastasia.ics">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="1"/><path d="M3.5 9.5h17M8 3v4M16 3v4M12 12.5v5M9.5 15h5"/></svg>
+          Добавить в календарь
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <figure class="photo" style="--ar:3 / 4">
+    <img src="img/paris-hero-800.webp" srcset="img/paris-hero-800.webp 800w, img/paris-hero-1600.webp 1600w" sizes="100vw" alt="Евгений и Анастасия у Эйфелевой башни" loading="lazy">
+    <span class="stamp stamp--tr" data-city="Paris" data-country="France"></span>
+  </figure>
+
+  <section class="section program">
+    <div class="container">
+      <div class="section-title section-title--flame reveal"><h2>Программа дня</h2><svg class="flame" aria-hidden="true"><use href="#flame"/></svg></div>
+      <ol class="candles">
+        <li class="reveal"><h3>Регистрация</h3><time class="num">16:40</time><p class="small">Дворец бракосочетания №1, Английская наб., 28</p></li>
+        <li class="reveal"><h3>Сбор гостей</h3><time class="num">18:00</time><p class="small">«Никольский лофт», ул. Садовая, 62</p></li>
+        <li class="reveal"><h3>Встреча молодоженов</h3><time class="num">18:30</time><p class="small">Горка шампанского</p></li>
+        <li class="reveal"><h3>Начало ужина</h3><time class="num">19:00</time><p class="small">Праздничный вечер</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <figure class="photo" style="--ar:3 / 2">
+    <img src="img/nice1-800.webp" srcset="img/nice1-800.webp 800w, img/nice1-1600.webp 1600w" sizes="100vw" alt="Евгений и Анастасия в Ницце" loading="lazy">
+    <span class="stamp stamp--tr" data-city="Nice" data-country="France"></span>
+  </figure>
+
+  <section class="section dress">
+    <div class="container">
+      <h2 class="section-title reveal">Дресс-код</h2>
+      <p class="intro center reveal">Будем рады, если вы поддержите палитру нашей свадьбы: светлые теплые и пастельные оттенки, а также коричневый и черный.</p>
+      <ul class="swatches reveal">
+        <li class="swatch"><i style="background:#F8F4EE"></i>Айвори</li>
+        <li class="swatch"><i style="background:#E9DFD3"></i>Беж</li>
+        <li class="swatch"><i style="background:#D8C3A5"></i>Шампань</li>
+        <li class="swatch"><i style="background:#E8CFC6"></i>Пудровый розовый</li>
+        <li class="swatch"><i style="background:#6B4A35"></i>Коричневый</li>
+        <li class="swatch"><i style="background:#1E1A17"></i>Черный</li>
+      </ul>
+    </div>
+  </section>
+
+  <figure class="photo" style="--ar:4 / 3">
+    <img src="img/monaco-800.webp" srcset="img/monaco-800.webp 800w, img/monaco-1600.webp 1600w" sizes="100vw" alt="Евгений и Анастасия в Монако" loading="lazy">
+    <span class="stamp stamp--tr" data-city="Monaco" data-country="Monte-Carlo"></span>
+  </figure>
+
+  <section class="section seating">
+    <div class="container container--wide">
+      <h2 class="section-title reveal">Рассадка</h2>
+      <div class="finder reveal">
+        <label class="caps" for="guest-search">Найдите себя</label>
+        <input id="guest-search" type="search" placeholder="Ваша фамилия" autocomplete="off" enterkeyhint="search">
+        <p class="finder-result" id="guest-result" aria-live="polite"></p>
+      </div>
+      <div class="tables reveal" id="tables"></div>
+    </div>
+  </section>
+
+  <figure class="photo" style="--ar:3 / 2">
+    <img src="img/tokyo1-800.webp" srcset="img/tokyo1-800.webp 800w, img/tokyo1-1600.webp 1600w" sizes="100vw" alt="Евгений и Анастасия в Токио" loading="lazy">
+    <span class="stamp stamp--tr" data-city="Tokyo" data-country="Japan"></span>
+  </figure>
+
+  <section class="finale">
+    <div class="section container container--text finale-text reveal">
+      <div class="ornament"><i></i></div>
+      <h2 class="finale-title">До встречи, ждем вас!</h2>
+      <p class="small">13 ноября 2026 · Санкт-Петербург</p>
+    </div>
+    <figure class="photo" style="--ar:16 / 9">
+      <video data-autoplay muted loop playsinline preload="none" poster="img/barcelona-poster.webp" aria-label="Евгений и Анастасия в Барселоне">
+        <source src="img/barcelona.mp4" type="video/mp4">
+      </video>
+      <span class="stamp stamp--br" data-city="Barcelona" data-country="España"></span>
+    </figure>
+  </section>
+</main>
+
+<footer>
+  <p class="h3">Евгений &amp; Анастасия</p>
+  <span class="caps num">13.11.2026</span>
+</footer>
+
+<button class="music" type="button" aria-pressed="false" aria-label="Включить музыку" data-src="assets/music.mp3">
+  <svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 18V5l11-2v13"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/></svg>
+  <svg class="on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 6v12M16 6v12"/></svg>
+</button>
+
+<script src="assets/app.js" defer></script>
+</body>
+</html>
